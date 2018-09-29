@@ -17,8 +17,8 @@ if [[ ! -d '/root/work/db/config' ]]; then
 	mkdir -p '/root/work/db/config'
 fi
 
-mv /root/work/script/mongod.conf /root/work/db/config
-mv /root/work/script/mongod.service /lib/systemd/system/mongod.service
+mv /root/work/mongod.conf /root/work/db/config
+mv /root/work/mongod.service /lib/systemd/system/mongod.service
 chmod 755  /lib/systemd/system/mongod.service
 
 systemctl enable mongod.service #设置开机启动
