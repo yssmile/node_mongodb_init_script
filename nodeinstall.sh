@@ -18,9 +18,9 @@ if type node >/dev/null 2>&1; then
  echo "node has installed"
 else
 	cd 'downloads'
-	wget https://npm.taobao.org/mirrors/node/v7.8.0/node-v7.8.0-linux-x64.tar.gz
-	tar -zxvf node-v7.8.0-linux-x64.tar.gz
-	mv node-v7.8.0-linux-x64 /usr/local/node
+	wget https://nodejs.org/dist/v8.12.0/node-v8.12.0-linux-x64.tar.xz
+	tar xvJf node-v8.12.0-linux-x64.tar.xz
+	mv node-v8.12.0-linux-x64 /usr/local/node
 	echo "export PATH=/usr/local/node/bin:\$PATH" >> /etc/profile
 	source /etc/profile
 	if  type node >/dev/null 2>&1;  then
@@ -32,6 +32,6 @@ else
 	else
 		echo "node install failure"
 	fi
-	rm node-v7.8.0-linux-x64.tar.gz
+	rm node-v8.12.0-linux-x64.tar.xz
 	cd ..
 fi
